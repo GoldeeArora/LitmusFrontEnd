@@ -73,6 +73,7 @@ function Level() {
       });
   };
   const checkAnswer = () => {
+    alert("checking answer");
     console.log(typeof timeLeft);
 
     const LStimeLeft = parseInt(localStorage.getItem("timeLeft"));

@@ -30,12 +30,15 @@ const AdminLogin = () => {
   const data = { email: email, password: password };
   const handleLogin = (e) => {
     e.preventDefault();
+    alert("checking credentials");
     handleCheck();
     axios
       .post(`${apiUrl}/app/user/login`, data, {
-        headers: { "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": true },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true,
+        },
         withCredentials: true,
       })
       .then((response) => {

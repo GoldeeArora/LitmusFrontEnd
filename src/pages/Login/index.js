@@ -30,7 +30,7 @@ function Login() {
         } else alert(response.data);
       })
       .catch((error) => {
-        alert("login failed");
+        alert("login failed, try again");
         console.error(error);
       });
   };
